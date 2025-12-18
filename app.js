@@ -9,11 +9,10 @@ document.getElementById('sapucai').innerText = sapucai.toLocaleString();
 document.getElementById('balance').innerText =
   (ingresos - egresos).toLocaleString();
 
-
 // =====================
-// GRÁFICO 1: INGRESOS / EGRESOS / SAPUCAI
+// GRÁFICO NUEVO (LIMPIO)
 // =====================
-new Chart(document.getElementById('graficoIngresos'), {
+new Chart(document.getElementById('graficoResumenManual'), {
   type: 'bar',
   data: {
     labels: ['Ingresos', 'Egresos', 'Sapucai'],
@@ -34,19 +33,5 @@ new Chart(document.getElementById('graficoIngresos'), {
         }
       }
     }
-  }
-});
-
-
-// =====================
-// GRÁFICO 2: EGRESOS vs SAPUCAI
-// =====================
-new Chart(document.getElementById('graficoMedio'), {
-  type: 'pie',
-  data: {
-    labels: ['Egresos', 'Sapucai'],
-    datasets: [{
-      data: [egresos, sapucai]
-    }]
   }
 });
