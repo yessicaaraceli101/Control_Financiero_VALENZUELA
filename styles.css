@@ -1,0 +1,22 @@
+
+body { font-family: Arial, sans-serif; background:#f4f4f4; padding:20px; }
+h1 { text-align:center; }
+.cards {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:15px;
+  margin-bottom:30px;
+}
+.card {
+  background:#fff;
+  padding:20px;
+  border-radius:8px;
+  text-align:center;
+  font-size:18px;
+}
+.card span { font-size:22px; font-weight:bold; }
+.charts {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:30px;
+}
