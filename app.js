@@ -29,6 +29,7 @@ function resultadoMes(mes) {
   return mes.ingresos - mes.egresos;
 }
 
+
 // =====================
 // OCTUBRE
 // =====================
@@ -116,21 +117,22 @@ new Chart(document.getElementById('graficoResumenManual'), {
     ]
   },
   options: {
-    responsive: false,
-    plugins: {
-      legend: {
-        position: 'bottom'
-      }
+  responsive: true,
+  maintainAspectRatio: false, // CLAVE
+  plugins: {
+    legend: {
+      position: 'bottom'
+    }
+  },
+  scales: {
+    x: {
+      grid: { display: false }
     },
-    scales: {
-      x: {
-        grid: { display: false }
-      },
-      y: {
-        ticks: {
-          callback: value => value.toLocaleString()
-        }
+    y: {
+      ticks: {
+        callback: value => value.toLocaleString()
       }
     }
   }
+}
 });

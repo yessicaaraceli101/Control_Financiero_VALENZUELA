@@ -33,18 +33,18 @@ h2.mes {
 }
 
 /* =====================
-   GRID DE TARJETAS
+   GRID DE TARJETAS (DESKTOP)
 ===================== */
 .cards {
   max-width: 1100px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 22px;
 }
 
 /* =====================
-   TARJETA BASE (TODAS IGUALES)
+   TARJETA BASE
 ===================== */
 .card {
   background: #ffffff;
@@ -75,34 +75,17 @@ h2.mes {
 }
 
 /* =====================
-   COLORES POR TIPO
+   COLORES
 ===================== */
+.card.ingresos { border-top: 4px solid #1e88e5; }
+.card.ingresos span { color: #1e88e5; }
 
-/* Ingresos */
-.card.ingresos {
-  border-top: 4px solid #1e88e5;
-}
-.card.ingresos span {
-  color: #1e88e5;
-}
+.card.egresos { border-top: 4px solid #f9a825; }
+.card.egresos span { color: #f9a825; }
 
-/* Egresos */
-.card.egresos {
-  border-top: 4px solid #f9a825;
-}
-.card.egresos span {
-  color: #f9a825;
-}
+.card.resultado { border-top: 4px solid #6a1b9a; }
+.card.resultado span { color: #6a1b9a; }
 
-/* Saldo */
-.card.resultado {
-  border-top: 4px solid #6a1b9a;
-}
-.card.resultado span {
-  color: #6a1b9a;
-}
-
-/* Pendientes */
 .card.pendientes {
   border-top: 4px solid #e53935;
   background: linear-gradient(
@@ -111,44 +94,87 @@ h2.mes {
     #ffffff 60%
   );
 }
-.card.pendientes span {
-  color: #e53935;
-}
+.card.pendientes span { color: #e53935; }
 
 /* =====================
    GRÁFICO
 ===================== */
 .charts {
-  max-width: 900px;
+  max-width: 1000px;
+  height: 420px;
   margin: 60px auto 20px;
   background: #ffffff;
-  padding: 30px;
+  padding: 24px;
   border-radius: 22px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* =====================
-   RESPONSIVE (MÓVILES)
+   TABLET
 ===================== */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =====================
+   CELULAR (CLAVE)
+===================== */
+@media (max-width: 600px) {
   body {
-    padding: 20px;
+    padding: 18px;
   }
 
   h1 {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   h2.mes {
-    font-size: 20px;
+    font-size: 18px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
   }
 
   .card span {
     font-size: 22px;
   }
 
+  .charts {
+  max-width: 1000px;
+  margin: 70px auto 40px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 22px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+  /* NUEVO */
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.charts canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
   canvas {
     width: 100% !important;
     height: auto !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .charts {
+    height: 300px;
+    padding: 20px;
   }
 }
