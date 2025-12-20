@@ -3,282 +3,9 @@
 ===================== */
 * {
   box-sizing: border-box;
-  font-family: 'Inter', 'Segoe UI', sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background: linear-gradient(180deg, #f7f9fc, #eef2f7);
-  padding: 40px;
-  color: #1f2937;
-}
-
-/* =====================
-   TÍTULOS
-===================== */
-h1 {
-  text-align: center;
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 40px;
-}
-
-h2.mes {
-  max-width: 1100px;
-  margin: 50px auto 18px auto;
-  font-size: 22px;
-  font-weight: 600;
-  color: #374151;
-}
-
-/* =====================
-   GRID DE TARJETAS
-===================== */
-.cards {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 24px;
-}
-
-/* =====================
-   TARJETA BASE
-===================== */
-.card {
-  background: #ffffff;
-  border-radius: 18px;
-  padding: 24px;
-  text-align: center;
-  min-height: 130px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  box-shadow:
-    0 8px 20px rgba(0,0,0,0.08),
-    inset 0 0 0 1px rgba(0,0,0,0.03);
-
-  transition: transform .2s ease, box-shadow .2s ease;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 14px 32px rgba(0,0,0,0.12);
-}
-
-.card span {
-  margin-top: 12px;
-  font-size: 26px;
-  font-weight: 700;
-  letter-spacing: 0.3px;
-}
-
-/* =====================
-   COLORES POR TIPO
-===================== */
-
-/* Ingresos */
-.card.ingresos span {
-  color: #1e88e5;
-}
-
-/* Egresos */
-.card.egresos span {
-  color: #f9a825;
-}
-
-/* Resultado */
-.card.resultado span {
-  color: #6a1b9a;
-}
-
-/* =====================
-   PENDIENTES (ROJO PROFESIONAL)
-===================== */
-.card.pendientes {
-  border-left: 6px solid #e53935;
-  background: linear-gradient(
-    90deg,
-    rgba(229,57,53,0.05),
-    #ffffff 45%
-  );
-}
-
-.card.pendientes span {
-  color: #e53935;
-}
-
-.card.pendientes::after {
-  margin-top: 6px;
-  font-size: 12px;
-  color: #6b7280;
-}
-
-/* =====================
-   GRÁFICO
-===================== */
-.charts {
-  max-width: 900px;
-  margin: 60px auto 30px auto;
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 22px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-}
-
-/* =====================
-   RESPONSIVE
-===================== */
-@media (max-width: 768px) {
-  body {
-    padding: 20px;
-  }
-
-  h1 {
-    font-size: 24px;
-  }
-
-  .card span {
-    font-size: 22px;
-  }
-}
-
-* {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: 'Inter', 'Segoe UI', sans-serif;
-}
-
-body {
-  background: linear-gradient(180deg, #f7f9fc, #eef2f7);
-  padding: 40px;
-  color: #1f2937;
-}
-
-/* =====================
-   TÍTULOS
-===================== */
-h1 {
-  text-align: center;
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 40px;
-}
-
-h2.mes {
-  max-width: 1100px;
-  margin: 50px auto 18px;
-  font-size: 22px;
-  font-weight: 600;
-  color: #374151;
-}
-
-/* =====================
-   GRID DE TARJETAS
-===================== */
-.cards {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-}
-
-/* =====================
-   TARJETA BASE (TODAS IGUALES)
-===================== */
-.card {
-  background: #ffffff;
-  border-radius: 18px;
-  padding: 24px;
-  min-height: 130px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  transition: transform .2s ease, box-shadow .2s ease;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 14px 32px rgba(0,0,0,0.12);
-}
-
-.card span {
-  margin-top: 12px;
-  font-size: 26px;
-  font-weight: 700;
-  letter-spacing: 0.3px;
-}
-
-/* =====================
-   VARIACIONES DE COLOR (SUTILES)
-===================== */
-
-.card.ingresos {
-  border-top: 4px solid #1e88e5;
-}
-.card.ingresos span {
-  color: #1e88e5;
-}
-
-.card.egresos {
-  border-top: 4px solid #f9a825;
-}
-.card.egresos span {
-  color: #f9a825;
-}
-
-.card.resultado {
-  border-top: 4px solid #6a1b9a;
-}
-.card.resultado span {
-  color: #6a1b9a;
-}
-
-.card.pendientes {
-  border-top: 4px solid #e53935;
-}
-.card.pendientes span {
-  color: #e53935;
-}
-
-/* =====================
-   GRÁFICO
-===================== */
-.charts {
-  max-width: 900px;
-  margin: 60px auto 30px;
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 22px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-}
-
-/* =====================
-   RESPONSIVE
-===================== */
-@media (max-width: 900px) {
-  .cards {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  }
-}
-
-/* =====================
-   RESET
-===================== */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', Inter, sans-serif;
 }
 
 body {
@@ -302,10 +29,11 @@ h2.mes {
   margin: 40px auto 18px;
   font-size: 22px;
   font-weight: 600;
+  color: #374151;
 }
 
 /* =====================
-   CONTENEDOR TARJETAS
+   GRID DE TARJETAS
 ===================== */
 .cards {
   max-width: 1100px;
@@ -316,7 +44,7 @@ h2.mes {
 }
 
 /* =====================
-   TARJETA BASE
+   TARJETA BASE (TODAS IGUALES)
 ===================== */
 .card {
   background: #ffffff;
@@ -328,6 +56,8 @@ h2.mes {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  text-align: center;
 
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
   transition: transform .2s ease, box-shadow .2s ease;
@@ -372,12 +102,12 @@ h2.mes {
   color: #6a1b9a;
 }
 
-/* Pendiente */
+/* Pendientes */
 .card.pendientes {
   border-top: 4px solid #e53935;
   background: linear-gradient(
     180deg,
-    rgba(229,57,53,0.05),
+    rgba(229,57,53,0.06),
     #ffffff 60%
   );
 }
@@ -398,7 +128,7 @@ h2.mes {
 }
 
 /* =====================
-   RESPONSIVE
+   RESPONSIVE (MÓVILES)
 ===================== */
 @media (max-width: 768px) {
   body {

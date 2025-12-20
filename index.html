@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Control Financiero</title>
+
+  <!-- Estilos -->
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
@@ -11,82 +15,93 @@
   <h1>Control Financiero Mensual Valenzuela</h1>
 
   <!-- ================= OCTUBRE ================= -->
-  <h2 class="mes">Octubre 2025</h2>
-  <div class="cards">
-    <div class="card ingresos">
-      Ingresos
-      <span id="ing_oct">0</span>
-    </div>
+  <section class="mes-bloque">
+    <h2 class="mes">Octubre 2025</h2>
 
-    <div class="card egresos">
-      Egresos
-      <span id="egr_oct">0</span>
-    </div>
+    <div class="cards">
+      <div class="card ingresos">
+        Ingresos
+        <span id="ing_oct">0</span>
+      </div>
 
-    <div class="card resultado">
-      Saldo
-      <span id="res_oct">0</span>
-    </div>
+      <div class="card egresos">
+        Egresos
+        <span id="egr_oct">0</span>
+      </div>
 
-    <div class="card pendientes">
-      Pendiente de pago
-      <span id="pen_oct">0</span>
+      <div class="card resultado">
+        Saldo
+        <span id="res_oct">0</span>
+      </div>
+
+      <div class="card pendientes">
+        Pendiente de pago
+        <span id="pen_oct">0</span>
+      </div>
     </div>
-  </div>
+  </section>
 
   <!-- ================= NOVIEMBRE ================= -->
-  <h2 class="mes">Noviembre 2025</h2>
-  <div class="cards">
-    <div class="card ingresos">
-      Ingresos
-      <span id="ing_nov">0</span>
-    </div>
+  <section class="mes-bloque">
+    <h2 class="mes">Noviembre 2025</h2>
 
-    <div class="card egresos">
-      Egresos
-      <span id="egr_nov">0</span>
-    </div>
+    <div class="cards">
+      <div class="card ingresos">
+        Ingresos
+        <span id="ing_nov">0</span>
+      </div>
 
-    <div class="card resultado">
-      Saldo
-      <span id="res_nov">0</span>
-    </div>
+      <div class="card egresos">
+        Egresos
+        <span id="egr_nov">0</span>
+      </div>
 
-    <div class="card pendientes">
-      Pendiente de pago
-      <span id="pen_nov">0</span>
+      <div class="card resultado">
+        Saldo
+        <span id="res_nov">0</span>
+      </div>
+
+      <div class="card pendientes">
+        Pendiente de pago
+        <span id="pen_nov">0</span>
+      </div>
     </div>
-  </div>
+  </section>
 
   <!-- ================= DICIEMBRE ================= -->
-  <h2 class="mes">Diciembre 2025</h2>
-  <div class="cards">
-    <div class="card ingresos">
-      Ingresos
-      <span id="ing_dic">0</span>
+  <section class="mes-bloque">
+    <h2 class="mes">Diciembre 2025</h2>
+
+    <div class="cards">
+      <div class="card ingresos">
+        Ingresos
+        <span id="ing_dic">0</span>
+      </div>
+
+      <div class="card egresos">
+        Egresos
+        <span id="egr_dic">0</span>
+      </div>
+
+      <div class="card resultado">
+        Saldo
+        <span id="res_dic">0</span>
+      </div>
+
+      <div class="card pendientes">
+        Pendiente de pago
+        <span id="pen_dic">0</span>
+      </div>
     </div>
+  </section>
 
-    <div class="card egresos">
-      Egresos
-      <span id="egr_dic">0</span>
-    </div>
+  <!-- ================= GRÁFICO ================= -->
+  <section class="charts">
+    <canvas id="graficoResumenManual"></canvas>
+  </section>
 
-    <div class="card resultado">
-      Saldo
-      <span id="res_dic">0</span>
-    </div>
-
-    <div class="card pendientes">
-      Pendiente de pago
-      <span id="pen_dic">0</span>
-    </div>
-  </div>
-
-  <!-- ================= GRÁFICO COMPARATIVO ================= -->
-  <div class="charts" style="display:flex; justify-content:center; margin-top:40px;">
-    <canvas id="graficoResumenManual" width="520" height="260"></canvas>
-  </div>
-
+  <!-- Script -->
   <script src="app.js"></script>
+
 </body>
 </html>
