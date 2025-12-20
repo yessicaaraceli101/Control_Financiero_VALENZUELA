@@ -270,3 +270,155 @@ h2.mes {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   }
 }
+
+/* =====================
+   RESET
+===================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Inter, sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #f7f9fc, #eef2f7);
+  color: #1f2937;
+  padding: 32px;
+}
+
+/* =====================
+   TÍTULOS
+===================== */
+h1 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+h2.mes {
+  max-width: 1100px;
+  margin: 40px auto 18px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* =====================
+   CONTENEDOR TARJETAS
+===================== */
+.cards {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 22px;
+}
+
+/* =====================
+   TARJETA BASE
+===================== */
+.card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 22px;
+  min-height: 120px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 35px rgba(0,0,0,0.12);
+}
+
+.card span {
+  margin-top: 10px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* =====================
+   COLORES POR TIPO
+===================== */
+
+/* Ingresos */
+.card.ingresos {
+  border-top: 4px solid #1e88e5;
+}
+.card.ingresos span {
+  color: #1e88e5;
+}
+
+/* Egresos */
+.card.egresos {
+  border-top: 4px solid #f9a825;
+}
+.card.egresos span {
+  color: #f9a825;
+}
+
+/* Saldo */
+.card.resultado {
+  border-top: 4px solid #6a1b9a;
+}
+.card.resultado span {
+  color: #6a1b9a;
+}
+
+/* Pendiente */
+.card.pendientes {
+  border-top: 4px solid #e53935;
+  background: linear-gradient(
+    180deg,
+    rgba(229,57,53,0.05),
+    #ffffff 60%
+  );
+}
+.card.pendientes span {
+  color: #e53935;
+}
+
+/* =====================
+   GRÁFICO
+===================== */
+.charts {
+  max-width: 900px;
+  margin: 60px auto 20px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 22px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2.mes {
+    font-size: 20px;
+  }
+
+  .card span {
+    font-size: 22px;
+  }
+
+  canvas {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
