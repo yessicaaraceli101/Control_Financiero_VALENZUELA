@@ -15,10 +15,10 @@ const datos = {
     pendiente: 160000     
   },
   diciembre: {
-    ingresos: 22363000,
-    egresos: 14357500,
+    ingresos: 26553000,
+    egresos: 14530500,
     pagado: 6700000,
-    pendiente: 13106000      
+    pendiente: 9896000      
   }
 };
 
