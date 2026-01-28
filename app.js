@@ -18,7 +18,7 @@ const datos = {
     ingresos: 30908000,
     egresos: 15295900,
     pagado: 6700000,
-    pendiente: 6266000      
+    pendiente: 1040000      
   }
 };
 
